@@ -39,13 +39,14 @@ while(i < parsed.length) {
     var hijriDate = parseInt(hijriDateText);
     var hijriMonthText = parsed[i+2][j].trim();
 
-    console.log(gregDate, gregorianMonthIndex+1, hijriDate, hijriMonthText);
     var hijriMonth = hijriMonths.indexOf(hijriMonthText) + 1;
     // console.log(hijriMonthText, hijriMonth);
 
-    if (hijriMonth === 1 && hijriDate === 1 && gregDate !== 1) {
+    if (hijriMonth === 1 && hijriDate === 1) {
       hijriYear += 1;
     }
+
+    console.log(gregDate, gregorianMonthIndex+1, hijriDate, hijriMonthText, hijriYear);
 
     currentMonthArray.push({
       "hijriDate": hijriDate,
